@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'application'
+    id 'maven'
 }
 
 
@@ -32,6 +33,7 @@ dependencies {
     def junitVersion = 'junit:junit:4.12'
 
     testCompile "${junitVersion}"
+    compile 'commons-lang:commons-lang:2.3'
 }
 
 
