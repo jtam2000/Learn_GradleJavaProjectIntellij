@@ -19,6 +19,11 @@ sourceSets {
             srcDirs = ['src']
         }
     }
+    test {
+        java {
+            srcDirs = ['test']
+        }
+    }
 }
 
 repositories {
@@ -30,15 +35,14 @@ dependencies {
 }
 
 
-def mainFunction = 'com.jasontam.learngradlejavaproject.MainApplication.MainApplication'
+def mainFunction = "${group}.learngradlejavaproject.MainApplication.MainApplication"
 
 
-project.mainClassName = 'com.jasontam.learngradlejavaproject.MainApplication.MainApplication'
-
+mainClassName = "$mainFunction"
 
 jar {
     manifest {
-        attributes "Main-Class": 'com.jasontam.learngradlejavaproject.MainApplication.MainApplication'
+        attributes "Main-Class": "$mainFunction"
     }
 }
 

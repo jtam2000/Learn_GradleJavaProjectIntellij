@@ -13,8 +13,8 @@ public class MainApplication {
         Date today = Calendar.getInstance().getTime();
 
 
-        out.println("hello world from GradleBuild Application:");
-        out.println("execution time is=>" + today.toString());
+        out.println("\nHello world from GradleBuild Application Main Class:");
+        out.println("Execution time:=>" + today.toString());
 
         Employee ee = new Employee("Jason Tam");
 
