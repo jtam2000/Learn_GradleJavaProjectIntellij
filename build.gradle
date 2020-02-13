@@ -49,5 +49,18 @@ jar {
 }
 
 task Task1 {
-    println "main class is $mainFunction"
+    //println "main class is $mainFunction"
+    def my_files = project.fileTree("./").include "**/*.log.txt.*"
+    for (f in my_files) {
+        println f
+    }
+
+}
+
+task removelogs (type: Delete ) {
+
+    delete fileTree("./").matching {
+        include "**/*.log.txt.*", "**/MainApp.log.*"
+
+    }
 }
