@@ -36,10 +36,10 @@ public class Employee {
         //class_logger = logger.orElse(class_logger);
         if (lg!=null) class_logger=lg;
         class_logger.entering(getClass().getName(),"createEmployee");
-
+        class_logger.info("logger is "+ class_logger.getName());
         setEmployee_name(name);
 
-        class_logger.info("Created an Employee named: " + name);
+        class_logger.info("Created qan Employee named: " + name);
         class_logger.exiting(getClass().getName(),"createEmployee");
 
 

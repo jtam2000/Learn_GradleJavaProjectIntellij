@@ -36,6 +36,7 @@ public class MainApplication {
         appLogger.info("Execution time:=>" + today.toString());
 
         Employee ee = new Employee("Jason Tam", appLogger);
+        Employee ee_without_looger = new Employee("Linda Tam");
 
     }
 }
