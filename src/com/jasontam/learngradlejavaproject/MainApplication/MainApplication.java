@@ -29,7 +29,6 @@ public class MainApplication {
         } catch (SecurityException | IOException e1){
             e1.printStackTrace();
         }
-        appLogger.setLevel(Level.FINE);
 
         Date today = Calendar.getInstance().getTime();
 

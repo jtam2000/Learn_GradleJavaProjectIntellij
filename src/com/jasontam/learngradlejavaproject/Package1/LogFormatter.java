@@ -8,20 +8,52 @@ import java.util.logging.LogRecord;
 
 public class LogFormatter extends Formatter{
 
+    //Example: 02/13/2020 18:29:38:038
+    public final String defaultDateFormat="MM/dd/yyyy HH:mm:ss:sss";
+
+    //1 date, 2 level, 3 message, 4 thread_id, 5 logger_name, 6 Class_name, 7 Method_Name
+    public final String defaultOutputFormat="[%s]:[%s]:[%s]:[thread:%s]:[logger:%s]:[class:%s]:[func:%s]\n";
+
+
     @Override
     public String format(LogRecord record) {
+        return format(record, defaultDateFormat, defaultOutputFormat);
+    }
 
+    public String format(LogRecord record, String dateFormat, String outputFormat) {
+
+        //1 Log date
         Date currentDateTime = new Date(record.getMillis());
-        DateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:sss");
-        String dateTimeString = dateFormat.format(currentDateTime);
+        DateFormat logDateFormat= new SimpleDateFormat(dateFormat);
+        String dateTimeString = logDateFormat.format(currentDateTime);
 
+        //2 log level name
         String levelString = record.getLevel().getName();
 
+        //3 log message
         String messageString = record.getMessage();
 
+        //4 log thread id
         String threadIdString = new Integer(record.getThreadID()).toString();
 
-        String rtn = String.format("[%s]:[%s]:[%s]:[thread:%s]\n",dateTimeString, levelString, messageString, threadIdString);
+        //5 Logger_name
+        String loggerName = record.getLoggerName();
+
+        //6 Class Name
+        String className = record.getSourceClassName();
+
+        //7 Method Name
+        String methodName = record.getSourceMethodName();
+
+        String rtn = String.format(outputFormat,
+                                    dateTimeString,
+                                    levelString,
+                                    messageString,
+                                    threadIdString,
+                                    loggerName,
+                                    className,
+                                    methodName);
+
 
         return rtn;
     }

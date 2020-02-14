@@ -38,11 +38,18 @@ public class LogFormatterTest {
 
         String threadIdString = new Integer(sampleLog.getThreadID()).toString();
 
-        String expectedString= String.format("[%s]:[%s]:[%s]:[thread:%s]\n",dateTimeString, levelString, messageString, threadIdString);
 
-        //[Feb 13 2020 17:55:36:036]:[INFO]:[This is test message 83123]:[thread:10]
-        //appLogger.info("formatted string is:"+msg);
-        //appLogger.info("Expected String:"+ expectedString);
+        //5 Logger_name
+        String loggerName = sampleLog.getLoggerName();
+
+        //6 Class Name
+        String className = sampleLog.getSourceClassName();
+
+        //7 Method Name
+        String methodName = sampleLog.getSourceMethodName();
+
+        String expectedString= String.format("[%s]:[%s]:[%s]:[thread:%s]:[logger:%s]:[class:%s]:[func:%s]\n",
+                dateTimeString, levelString, messageString, threadIdString, loggerName, className, methodName);
 
         assertEquals(expectedString,actualString);
 
