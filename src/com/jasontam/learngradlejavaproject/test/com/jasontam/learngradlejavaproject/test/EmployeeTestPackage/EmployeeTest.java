@@ -1,17 +1,34 @@
 package com.jasontam.learngradlejavaproject.test.EmployeeTestPackage;
 
+import com.jasontam.learngradlejavaproject.AppLogging.AppLogger;
 import com.jasontam.learngradlejavaproject.Package1.Employee;
-import org.junit.Test;
+import junit.framework.TestCase;
+import java.util.logging.Logger;
 
-import static java.lang.System.out;
-import static org.junit.Assert.assertEquals;
 
-public class EmployeeTest {
+public class EmployeeTest extends TestCase {
 
-    @Test
+    private static AppLogger app=AppLogger.getInstance();
+
+    private static Logger localLogger = null;
+
+    @Override
+    protected void setUp() {
+
+        app.setAppLogger(
+                EmployeeTest.class.getName(),
+                "logging.properties",
+                "./MainAppTest.log.txt",
+                200,
+                5);
+
+        localLogger = app.getAppLogger();
+    }
+
+
     public void testEmployee_get_employee_name() {
 
-        out.println("Start testEmployee_get_employee_name");
+        localLogger.info("Start testEmployee_get_employee_name");
 
         //Given
         final String employee_name = "Jason Tam";
@@ -22,13 +39,12 @@ public class EmployeeTest {
 
         //Then
         assertEquals(ee.getEmployee_name(), employee_name);
-        out.println("End testEmployee_get_employee_name");
+        app.getAppLogger().info("End testEmployee_get_employee_name");
     }
 
-    @Test
     public void testEmployee_set_employee_name(){
 
-        out.println("Start Running testEmployee_set_employee_name");
+        localLogger.info("Start Running testEmployee_set_employee_name");
 
         //Given
         final String old_employee_name = "Last Name, First Name";
@@ -40,7 +56,7 @@ public class EmployeeTest {
 
         //Then
         assertEquals(ee.getEmployee_name(), new_employee_name);
-        out.println("End testEmployee_set_employee_name");
+        localLogger.info("End testEmployee_set_employee_name");
     }
 
 

@@ -1,46 +1,38 @@
 package com.jasontam.learngradlejavaproject.Package1;
 
 
-import java.util.Optional;
-import java.util.logging.Logger;
+import com.jasontam.learngradlejavaproject.AppLogging.Loggable;
 
 
-public class Employee {
+public class Employee implements Loggable {
 
 
 
     private String employee_name;
-    private static Logger class_logger=Logger.getLogger(Employee.class.getName());
 
     public String getEmployee_name() {
         return employee_name;
     }
     public void setEmployee_name(String employee_name) {
+
         this.employee_name = employee_name;
+        getAppLogger().info("Set an Employee named " + employee_name);
     }
 
-
-    public Employee(String name, Logger lg) {
-        createEmployee(name,lg);
-    }
 
 
     public Employee(String name) {
-        createEmployee(name, null);
+        createEmployee(name);
     }
 
 
-    private void createEmployee(String name, Logger lg){
+    private void createEmployee(String name){
 
-        Optional<Logger> logger = Optional.ofNullable(lg);
-        //class_logger = logger.orElse(class_logger);
-        if (lg!=null) class_logger=lg;
-        class_logger.entering(getClass().getName(),"createEmployee");
-        class_logger.info("logger is "+ class_logger.getName());
+        getAppLogger().entering(getClass().getName(),"createEmployee");
         setEmployee_name(name);
 
-        class_logger.info("Created qan Employee named: " + name);
-        class_logger.exiting(getClass().getName(),"createEmployee");
+        getAppLogger().info("Created an Employee named: " + name);
+        getAppLogger().exiting(getClass().getName(),"createEmployee");
 
 
     }

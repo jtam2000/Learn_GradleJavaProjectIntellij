@@ -1,4 +1,4 @@
-package com.jasontam.learngradlejavaproject.Package1;
+package com.jasontam.learngradlejavaproject.AppLogging;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -34,7 +34,7 @@ public class LogFormatter extends Formatter{
         String messageString = record.getMessage();
 
         //4 log thread id
-        String threadIdString = new Integer(record.getThreadID()).toString();
+        String threadIdString = Integer.toString(record.getThreadID());
 
         //5 Logger_name
         String loggerName = record.getLoggerName();
@@ -45,17 +45,17 @@ public class LogFormatter extends Formatter{
         //7 Method Name
         String methodName = record.getSourceMethodName();
 
-        String rtn = String.format(outputFormat,
-                                    dateTimeString,
-                                    levelString,
-                                    messageString,
-                                    threadIdString,
-                                    loggerName,
-                                    className,
-                                    methodName);
+        return String.format(outputFormat,
+                dateTimeString,
+                levelString,
+                messageString,
+                threadIdString,
+                loggerName,
+                className,
+                methodName);
 
 
-        return rtn;
+
     }
 }
 

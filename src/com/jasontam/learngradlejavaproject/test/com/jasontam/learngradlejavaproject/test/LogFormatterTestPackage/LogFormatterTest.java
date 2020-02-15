@@ -1,7 +1,6 @@
 package com.jasontam.learngradlejavaproject.test.LogFormatterTestPackage;
 
-import com.jasontam.learngradlejavaproject.MainApplication.MainApplication;
-import com.jasontam.learngradlejavaproject.Package1.LogFormatter;
+import com.jasontam.learngradlejavaproject.AppLogging.LogFormatter;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -11,8 +10,6 @@ import java.util.logging.LogRecord;
 
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
-
-import static com.jasontam.learngradlejavaproject.MainApplication.MainApplication.appLogger;
 
 public class LogFormatterTest {
 
@@ -36,7 +33,7 @@ public class LogFormatterTest {
 
         String messageString = sampleLog.getMessage();
 
-        String threadIdString = new Integer(sampleLog.getThreadID()).toString();
+        String threadIdString = Integer.toString(sampleLog.getThreadID());
 
 
         //5 Logger_name

@@ -54,13 +54,13 @@ task Task1 {
     for (f in my_files) {
         println f
     }
+    
 
 }
 
-task removelogs (type: Delete ) {
+task removelogs {
 
     delete fileTree("./").matching {
-        include "**/*.log.txt.*", "**/MainApp.log.*"
-
+        include "**/*.log.txt.*"
     }
 }

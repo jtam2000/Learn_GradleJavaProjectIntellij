@@ -6,36 +6,38 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
-import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
+import com.jasontam.learngradlejavaproject.AppLogging.AppLogger;
 import com.jasontam.learngradlejavaproject.Package1.Employee;
-import com.jasontam.learngradlejavaproject.Package1.LogFormatter;
+import com.jasontam.learngradlejavaproject.AppLogging.LogFormatter;
 
 
 public class MainApplication {
 
-    public static Logger appLogger = Logger.getLogger(MainApplication.class.getName());
+    private static AppLogger appLogger = AppLogger.getInstance();
+
+
+    private static Logger localLogger = null;
 
     public static void main(String[] args) {
 
-        try {
-            LogManager.getLogManager().readConfiguration(new FileInputStream("logging.properties"));
-            Handler fileHandler = new FileHandler("./MainApp.log.txt", 200, 5);
-            fileHandler.setFormatter(new LogFormatter());
-            appLogger.addHandler(fileHandler);
+        appLogger.setAppLogger(
+                    MainApplication.class.getName(),
+                "logging.properties",
+                "./MainApp.log.txt",
+                200,
+                5);
 
-        } catch (SecurityException | IOException e1){
-            e1.printStackTrace();
-        }
+        localLogger = appLogger.getAppLogger();
 
         Date today = Calendar.getInstance().getTime();
 
-        appLogger.info("Hello world from GradleBuild Application Main Class");
-        appLogger.info("Execution time:=>" + today.toString());
+        localLogger.info("Hello world from GradleBuild Application Main Class");
+        localLogger.info("Execution time:=>" + today.toString());
 
-        Employee ee = new Employee("Jason Tam", appLogger);
+        Employee ee = new Employee("Jason Tam");
         Employee ee_without_looger = new Employee("Linda Tam");
 
     }
