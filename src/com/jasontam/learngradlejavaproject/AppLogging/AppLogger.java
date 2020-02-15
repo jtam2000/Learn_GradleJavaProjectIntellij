@@ -25,6 +25,26 @@ final public class AppLogger {
         return appLogger==null ? defaultAppLogger : appLogger;
     }
 
+    //The logger should be configured as a run parameter
+    // like -Djava.util.logging.config.file=myfile
+    public void setAppLogger(String loggerName) {
+
+        if (appLogger==null)
+            appLogger=Logger.getLogger(loggerName);
+
+        try {
+            Handler fileHandler = new FileHandler();
+            fileHandler.setFormatter(new LogFormatter());
+            appLogger.addHandler(fileHandler);
+
+        } catch (SecurityException | IOException e1){
+            e1.printStackTrace();
+        }
+
+    }
+
+
+    @Deprecated
     //Requires: Set once per application, once it has been set, it can not be changed per Application
     public void setAppLogger(String loggerName,
                              String logConfigFile,

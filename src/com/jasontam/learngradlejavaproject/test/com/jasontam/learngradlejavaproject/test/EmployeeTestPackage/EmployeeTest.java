@@ -1,8 +1,10 @@
 package com.jasontam.learngradlejavaproject.test.EmployeeTestPackage;
 
+
 import com.jasontam.learngradlejavaproject.AppLogging.AppLogger;
 import com.jasontam.learngradlejavaproject.Package1.Employee;
 import junit.framework.TestCase;
+
 import java.util.logging.Logger;
 
 
@@ -15,12 +17,7 @@ public class EmployeeTest extends TestCase {
     @Override
     protected void setUp() {
 
-        app.setAppLogger(
-                EmployeeTest.class.getName(),
-                "logging.properties",
-                "./MainAppTest.log.txt",
-                200,
-                5);
+        app.setAppLogger(EmployeeTest.class.getName());
 
         localLogger = app.getAppLogger();
     }

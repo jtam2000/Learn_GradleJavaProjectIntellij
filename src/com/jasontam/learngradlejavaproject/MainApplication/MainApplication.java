@@ -23,12 +23,7 @@ public class MainApplication {
 
     public static void main(String[] args) {
 
-        appLogger.setAppLogger(
-                    MainApplication.class.getName(),
-                "logging.properties",
-                "./MainApp.log.txt",
-                200,
-                5);
+        appLogger.setAppLogger(MainApplication.class.getName());
 
         localLogger = appLogger.getAppLogger();
 
