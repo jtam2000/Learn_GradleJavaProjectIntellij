@@ -26,7 +26,7 @@ public class LogFormatterTest {
 
         //Expecting
         Date currentDateTime = new Date(sampleLog.getMillis());
-        DateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:sss");
+        DateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:sss Z");
         String dateTimeString = dateFormat.format(currentDateTime);
 
         String levelString = sampleLog.getLevel().getName();

@@ -9,7 +9,7 @@ import java.util.logging.LogRecord;
 public class LogFormatter extends Formatter{
 
     //Example: 02/13/2020 18:29:38:038
-    public final String defaultDateFormat="MM/dd/yyyy HH:mm:ss:sss";
+    public final String defaultDateFormat="MM/dd/yyyy HH:mm:ss:sss Z";
 
     //1 date, 2 level, 3 message, 4 thread_id, 5 logger_name, 6 Class_name, 7 Method_Name
     public final String defaultOutputFormat="[%s]:[%s]:[%s]:[thread:%s]:[logger:%s]:[class:%s]:[func:%s]\n";

@@ -33,7 +33,9 @@ dependencies {
     def junitVersion = 'junit:junit:4.12'
 
     testCompile "${junitVersion}"
-    compile 'commons-lang:commons-lang:2.3'
+    
+    //This is needed in case you are just compiling the test tasks
+    compile "${junitVersion}"
 }
 
 

@@ -1,7 +1,6 @@
-.idea/**
 out/**
 .gradle/**
 build/**
 lib/**
-Test Results*
 target/**
+.DS_Store
