@@ -1,6 +1,6 @@
-package com.jasontam.learngradlejavaproject.test.LogFormatterTestPackage;
+package com.jasontam.learngradlejavaproject.test.logformattertestpackage;
 
-import com.jasontam.learngradlejavaproject.AppLogging.LogFormatter;
+import com.jasontam.learngradlejavaproject.applogging.LogFormatter;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -26,7 +26,7 @@ public class LogFormatterTest {
 
         //Expecting
         Date currentDateTime = new Date(sampleLog.getMillis());
-        DateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:sss Z");
+        DateFormat dateFormat= new SimpleDateFormat("MM/dd/yyyy HH:mm:ss:sss");
         String dateTimeString = dateFormat.format(currentDateTime);
 
         String levelString = sampleLog.getLevel().getName();
@@ -45,7 +45,7 @@ public class LogFormatterTest {
         //7 Method Name
         String methodName = sampleLog.getSourceMethodName();
 
-        String expectedString= String.format("[%s]:[%s]:[%s]:[thread:%s]:[logger:%s]:[class:%s]:[func:%s]\n",
+        String expectedString= String.format("[%s]:[%s]:[%s]:[thread:%s]:[logger:%s]:[class:%s]:[func:%s]%n",
                 dateTimeString, levelString, messageString, threadIdString, loggerName, className, methodName);
 
         assertEquals(expectedString,actualString);

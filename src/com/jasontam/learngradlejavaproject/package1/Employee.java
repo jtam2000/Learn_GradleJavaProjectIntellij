@@ -1,7 +1,7 @@
-package com.jasontam.learngradlejavaproject.Package1;
+package com.jasontam.learngradlejavaproject.package1;
 
 
-import com.jasontam.learngradlejavaproject.AppLogging.Loggable;
+import com.jasontam.learngradlejavaproject.applogging.Loggable;
 
 
 public class Employee implements Loggable {

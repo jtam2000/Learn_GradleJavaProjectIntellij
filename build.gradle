@@ -1,7 +1,7 @@
 plugins {
     id 'java'
     id 'application'
-    id 'maven'
+    //id 'maven'
 }
 
 
@@ -25,8 +25,20 @@ sourceSets {
     }
 }
 
+
 repositories {
     mavenCentral()
+}
+
+def loggingConfigurationFile = 'logging.properties'
+
+test {
+
+    systemProperty 'java.util.logging.config.file', "${loggingConfigurationFile}"
+}
+
+tasks.withType(JavaExec) {
+    systemProperty 'java.util.logging.config.file', "${loggingConfigurationFile}"
 }
 
 dependencies {
@@ -39,7 +51,7 @@ dependencies {
 }
 
 
-def mainFunction = "${group}.learngradlejavaproject.MainApplication.MainApplication"
+def mainFunction = "${group}.learngradlejavaproject.mainapplication.MainApplication"
 
 
 mainClassName = "$mainFunction"
@@ -62,7 +74,7 @@ task Task1 {
 
 task removelogs {
 
-    delete fileTree("./").matching {
+    delete fileTree("~/").matching {
         include "**/*.log.txt.*"
     }
 }

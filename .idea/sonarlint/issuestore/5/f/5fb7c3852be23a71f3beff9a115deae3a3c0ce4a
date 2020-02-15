@@ -1,0 +1,15 @@
+
+>squid:S1481#"'Remove this unused "ee" local variable.(¢«‹È
+Msquid:S1481$"6Remove this unused "ee_without_looger" local variable.(Ìè‡ 
+Ysquid:UselessImportCheck"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ
+ssquid:S2629!"\Invoke method(s) only conditionally. Use the built-in formatting to construct this argument.(—¢¢‹
+Xsquid:UselessImportCheck"4Remove this unused import 'java.io.FileInputStream'.(˜³ÉÓ
+^squid:UselessImportCheck":Remove this unused import 'java.util.logging.FileHandler'.(—­—å
+Msquid:S1854#"6Remove this useless assignment to local variable "ee".(¢«‹È
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(º¦à
+isquid:S00117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ìè‡ 
+qsquid:S1450"ZRemove the "localLogger" field and declare it as a local variable in the relevant methods.(„·…ı
+\squid:S1854$"ERemove this useless assignment to local variable "ee_without_looger".(Ìè‡ 
+_squid:UselessImportCheck"6Remove this unused import 'java.util.logging.Handler'.(ƒœ®èûÿÿÿÿ
+bsquid:UselessImportCheck	"9Remove this unused import 'java.util.logging.LogManager'.(›½ø·şÿÿÿÿ
+|squid:UselessImportCheck"XRemove this unused import 'com.jasontam.learngradlejavaproject.AppLogging.LogFormatter'.(•¾öµ

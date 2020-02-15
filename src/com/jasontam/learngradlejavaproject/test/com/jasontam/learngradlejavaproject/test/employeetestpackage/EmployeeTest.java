@@ -1,8 +1,8 @@
-package com.jasontam.learngradlejavaproject.test.EmployeeTestPackage;
+package com.jasontam.learngradlejavaproject.test.employeetestpackage;
 
 
-import com.jasontam.learngradlejavaproject.AppLogging.AppLogger;
-import com.jasontam.learngradlejavaproject.Package1.Employee;
+import com.jasontam.learngradlejavaproject.applogging.AppLogger;
+import com.jasontam.learngradlejavaproject.package1.Employee;
 import junit.framework.TestCase;
 
 import java.util.logging.Logger;
@@ -17,7 +17,7 @@ public class EmployeeTest extends TestCase {
     @Override
     protected void setUp() {
 
-        app.setAppLogger(EmployeeTest.class.getName());
+        app.setLogger(EmployeeTest.class.getName());
 
         localLogger = app.getAppLogger();
     }

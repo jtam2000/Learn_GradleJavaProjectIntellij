@@ -1,0 +1,11 @@
+
+Fsquid:S1148)"#Use a logger to log this exception.(Âþÿâûÿÿÿÿ8í€˜µ„.
+4squid:S1700"Rename field "appLogger"(ˆ‡Íùþÿÿÿÿ
+qsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¦˜á*
+Ssquid:S11331"5Do not forget to remove this deprecated code someday.(’ˆ¡‡8àÍ¤µ„.
+osquid:ModifiersOrderCheck
+"EReorder the modifiers to comply with the Java Language Specification.(ÍúŠ«ÿÿÿÿÿ
+?squid:S1148A"#Use a logger to log this exception.(Âþÿâûÿÿÿÿ
+Wsquid:MissingDeprecatedCheck1"(Add the missing @deprecated Javadoc tag.(’ˆ¡‡8àÍ¤µ„.
+Tsquid:S2696!"6Make the enclosing method "static" or remove this set.(€þô±8í€˜µ„.
+Msquid:S26968"6Make the enclosing method "static" or remove this set.(€þô±
