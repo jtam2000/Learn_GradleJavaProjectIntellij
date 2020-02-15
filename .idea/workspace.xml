@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d38ce0ad-44f8-4891-9e7a-f20f97e82e49" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$CACHE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/jason.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/a/2a45a911a8f1836b0b6c5b758962572012d8f8c3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37ea74abe20fd1f46d180dfe7ad05d368dd1d8ce" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/9/592a85ef435f5aa4de9407dbb8f4f935e5887cdd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/f/5fb7c3852be23a71f3beff9a115deae3a3c0ce4a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/c/9c837130f6efd9b07adfd55e135d5efc94e77667" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/5/a5cc2925ca8258af241be7e5b0381edf30266302" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/terminal.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logging.properties" beforeDir="false" afterPath="$PROJECT_DIR$/logging.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/AppLogging/AppLogger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/applogging/AppLogger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/AppLogging/LogFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/applogging/LogFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/AppLogging/Loggable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/applogging/Loggable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/MainApplication/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/mainapplication/MainApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/Package1/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/Package1/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/test/com/jasontam/learngradlejavaproject/test/EmployeeTestPackage/EmployeeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/test/com/jasontam/learngradlejavaproject/test/EmployeeTestPackage/EmployeeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/test/com/jasontam/learngradlejavaproject/test/LogFormatterTestPackage/LogFormatterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jasontam/learngradlejavaproject/test/com/jasontam/learngradlejavaproject/test/LogFormatterTestPackage/LogFormatterTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +119,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.25328946" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
   <component name="RecentsManager">
