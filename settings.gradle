@@ -1,2 +1,3 @@
 rootProject.name = 'Learn_GradleJavaProjectIntellij'
+enableFeaturePreview('STABLE_PUBLISHING')
 

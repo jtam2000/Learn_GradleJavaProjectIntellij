@@ -1,7 +1,8 @@
 plugins {
     id 'java'
+    id 'java-library'
     id 'application'
-    //id 'maven'
+    id 'maven-publish'
 }
 
 
@@ -28,8 +29,23 @@ sourceSets {
 
 repositories {
     mavenCentral()
+    maven {
+        url "/Users/JasonTam/.m2/repository"
+    }
 }
+publishing {
+    publications {
+        jasonLibrary(MavenPublication) {
+            from components.java
+        }
+    }
 
+    repositories {
+        maven {
+            name = 'jasonLocalMaven'
+            url "/Users/JasonTam/.m2/repository" }
+    }
+}
 def loggingConfigurationFile = 'logging.properties'
 
 test {
