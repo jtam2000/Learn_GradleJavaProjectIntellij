@@ -1,6 +1,7 @@
 package com.jasontam.learngradlejavaproject.applogging;
 
 import java.io.FileInputStream;
+import java.util.Optional;
 import java.util.logging.FileHandler;
 import java.util.logging.Handler;
 import java.util.logging.LogManager;
@@ -27,15 +28,15 @@ public final class AppLogger {
     // Someone has to set this once in an application
     //The logger should be configured as a run parameter
     // like -Djava.util.logging.config.file=logging.properties
-    public static void setLogger(String loggerName) {
+    public static Logger setLogger(String loggerName) {
 
         if (logger == null) logger = Logger.getLogger(loggerName);
 
         try {
-            String logConfigFile = System.getProperty(LOG_CONFIGURATION_SYSTEM_PROPERTY_NAME);
+            Optional<String> logConfigFile = Optional.ofNullable(System.getProperty(LOG_CONFIGURATION_SYSTEM_PROPERTY_NAME));
 
-            if (logConfigFile != null)
-                LogManager.getLogManager().readConfiguration(new FileInputStream(logConfigFile));
+            if (logConfigFile.isPresent())
+                LogManager.getLogManager().readConfiguration(new FileInputStream(logConfigFile.get()));
             else {
                 logger.warning(String.format("Reading logger config property:%s%n",
                                         LOG_CONFIGURATION_SYSTEM_PROPERTY_NAME));
@@ -52,6 +53,8 @@ public final class AppLogger {
                     LOG_CONFIGURATION_SYSTEM_PROPERTY_NAME));
             logger.severe(String.format("%s%n", e1.toString()));
         }
+
+        return logger;
 
     }
 

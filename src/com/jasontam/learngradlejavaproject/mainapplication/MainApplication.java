@@ -9,16 +9,9 @@ import com.jasontam.learngradlejavaproject.package1.Employee;
 
 public class MainApplication {
 
-    private static AppLogger appLogger = AppLogger.getInstance();
-
     public static void main(String[] args) {
 
-
-        Logger localLogger;
-
-        AppLogger.setLogger(MainApplication.class.getName());
-
-        localLogger = appLogger.getAppLogger();
+        Logger localLogger=AppLogger.setLogger(MainApplication.class.getName());
 
         Date today = Calendar.getInstance().getTime();
 

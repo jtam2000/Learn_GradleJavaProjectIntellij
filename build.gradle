@@ -7,7 +7,8 @@ plugins {
 
 
 group 'com.jasontam'
-version '1.0-SNAPSHOT'
+version '0.1.0'
+//version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
@@ -26,11 +27,11 @@ sourceSets {
     }
 }
 
-
+def localRepository = '/Users/jason/.m2/repository'
 repositories {
     mavenCentral()
     maven {
-        url "~/.m2/repository"
+        url "${localRepository}"
     }
 }
 publishing {
@@ -43,9 +44,12 @@ publishing {
     repositories {
         maven {
             name = 'jasonLocalMaven'
-            url "~/.m2/repository" }
+            url "${localRepository}/"
+	    }
     }
 }
+
+
 def loggingConfigurationFile = 'logging.properties'
 
 test {
@@ -77,6 +81,16 @@ jar {
         attributes "Main-Class": "$mainFunction"
     }
 }
+
+
+
+task createStartScripts(type: CreateStartScripts) {
+    outputDir = file('~/')
+    mainClassName = "$mainFunction"
+    applicationName = 'Learn_GradleJavaProjectIntellij'
+    classpath = files("${localRepository}/com/jasontam/Learn_GradleJavaProjectIntellij/0.1.0/Learn_GradleJavaProjectIntellij-0.1.0.jar")
+}
+
 
 task Task1 {
     //println "main class is $mainFunction"
